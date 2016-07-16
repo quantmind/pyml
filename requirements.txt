@@ -2,9 +2,12 @@ pip
 virtualenv
 cython
 numpy
+scipy
 tables
 psycopg2
 pandas
 lxml
 Pillow
 scikit-learn
+tesserocr
+Theano

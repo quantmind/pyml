@@ -10,12 +10,14 @@ Contains **Python 3.5.2** with the following libraries.
 ## Math & statistics
 
 * [numpy](http://www.numpy.org/)
+* [scipy](https://www.scipy.org/)
 * [pandas](http://pandas.pydata.org/)
 
 ## Processing & Parsers
 
 * [lxml](http://lxml.de/)
 * [Pillow](https://python-pillow.org/)
+* [Tesseract-ocr](https://github.com/tesseract-ocr/tesseract) with [tesserocr](https://github.com/sirfz/tesserocr) python bindings
 
 ## Database
 
@@ -25,6 +27,7 @@ Contains **Python 3.5.2** with the following libraries.
 ## Machine Learning
 
 * [scikit-learn](http://scikit-learn.org)
-* [tensorflow](https://www.tensorflow.org/)
+* [Theano](https://github.com/Theano/Theano)
+* [Tensorflow](https://www.tensorflow.org/)
 * [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit)
 * [XGBoost](https://xgboost.readthedocs.io/en/latest/)

@@ -48,3 +48,8 @@ RUN rm -rf vowpal_wabbit
 RUN git clone --recursive https://github.com/dmlc/xgboost
 WORKDIR /xgboost
 RUN make -j4
+RUN mv xgboost /usr/local/bin
+WORKDIR /xgboost/python-package
+RUN python setup.py install
+WORKDIR /
+RUN rm -rf xgboost
