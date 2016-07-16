@@ -5,5 +5,4 @@ pandas
 lxml
 Pillow
 scikit-learn
-tesserocr
 Theano

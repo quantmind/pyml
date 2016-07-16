@@ -7,6 +7,12 @@
 
 Data analysis and machine learning with python 3.
 
+Usage:
+```
+docker pull quantmind/pyml
+docker run --rm --name pyml -it quantmind/pyml /bin/bash
+```
+
 Contains **Python 3.5.2** with the following libraries.
 
 ## Math & statistics
