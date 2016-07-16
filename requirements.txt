@@ -1,7 +1,3 @@
-pip
-virtualenv
-cython
-numpy
 scipy
 tables
 psycopg2

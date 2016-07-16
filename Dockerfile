@@ -22,9 +22,12 @@ RUN apt-get install -yq --no-install-recommends \
 # RUN apt-get autoremove -yq
 
 # Install python packages
+ADD requirements-base.txt .
+RUN pip install -U -r requirements-base.txt
 ADD requirements.txt .
 RUN pip install -r requirements.txt
-
+RUN rm requirements-base.txt
+RUN rm requirements.txt
 
 # TENSORFLOW
 RUN pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.9.0-cp35-cp35m-linux_x86_64.whl
