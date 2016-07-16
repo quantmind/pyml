@@ -3,6 +3,7 @@
 **Docker Image**|[quantmind/pyml](https://hub.docker.com/r/quantmind/pyml/)
 --- | ---
 **Source code**|[quantmind/pyml](https://github.com/quantmind/pyml)
+**Create by**|[Quantmind](http://quantmind.com/)
 
 Data analysis and machine learning with python 3.
 
