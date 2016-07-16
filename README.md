@@ -1,6 +1,9 @@
 # Python ML
 
-Data analysys and machine learning with python 3.
+**Docker Image**: [quantmind/pyml](https://hub.docker.com/r/quantmind/pyml/)
+**Source code**: [quantmind/pyml](https://github.com/quantmind/pyml)
+
+Data analysis and machine learning with python 3.
 
 Contains **Python 3.5.2** with the following libraries.
 
