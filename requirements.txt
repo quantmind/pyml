@@ -1,0 +1,10 @@
+pip
+virtualenv
+cython
+numpy
+tables
+psycopg2
+pandas
+lxml
+Pillow
+scikit-learn
