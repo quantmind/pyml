@@ -32,7 +32,7 @@ RUN apt-get install -yq --no-install-recommends \
     tesseract-ocr \
     libtesseract-dev \
     libleptonica-dev
-RUN pip install tesserocr
+# RUN pip install tesserocr
 
 # TENSORFLOW
 RUN pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.9.0-cp35-cp35m-linux_x86_64.whl
