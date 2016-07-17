@@ -1,8 +1,0 @@
-scipy
-tables
-psycopg2
-pandas
-lxml
-Pillow
-scikit-learn
-Theano
