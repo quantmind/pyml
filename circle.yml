@@ -10,7 +10,7 @@ dependencies:
 
 test:
   override:
-    - docker run quantmind/pyml
+    - docker run quantmind/pyml python info.py
 
 deployment:
   registry:

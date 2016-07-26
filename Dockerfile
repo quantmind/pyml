@@ -2,6 +2,8 @@ FROM python:3.5.2
 
 MAINTAINER Luca Sbardella <luca@quantmind.com>
 
+ADD info.py .
+
 # Install packages
 RUN apt-get update -yq \
     && apt-get upgrade -yq \
