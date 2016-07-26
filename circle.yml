@@ -1,0 +1,20 @@
+machine:
+
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker build -t quantmind/pyml .
+
+test:
+  override:
+    - docker run quantmind/pyml
+
+deployment:
+  registry:
+    branch: master
+    commands:
+      - docker login -p $DOCKER_PASS -e $DOCKER_EMAIL -u $DOCKER_USER
+      - docker push quantmind/pyml

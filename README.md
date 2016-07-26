@@ -3,6 +3,7 @@
 **Docker Image**|[quantmind/pyml](https://hub.docker.com/r/quantmind/pyml/)
 --- | ---
 **Source code**|[quantmind/pyml](https://github.com/quantmind/pyml)
+**CI**|[![CircleCI](https://circleci.com/gh/quantmind/pyml.svg?style=svg)](https://circleci.com/gh/quantmind/pyml)
 **Created by**|[Quantmind](http://quantmind.com/)
 
 Data analysis and machine learning with python 3.
@@ -39,3 +40,6 @@ Contains **Python 3.5.2** with the following libraries.
 * [Tensorflow](https://www.tensorflow.org/)
 * [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit)
 * [XGBoost](https://xgboost.readthedocs.io/en/latest/)
+
+
+[![CircleCI](https://circleci.com/gh/quantmind/pyml.svg?style=svg)](https://circleci.com/gh/quantmind/pyml)
