@@ -9,6 +9,7 @@ RUN apt-get update -yq \
     && apt-get upgrade -yq \
     && apt-get install -yq --no-install-recommends \
         build-essential \
+        libhdf5 \
         libhdf5-dev \
         liblzo2-dev \
         libpq-dev \
