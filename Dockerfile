@@ -6,7 +6,6 @@ ADD info.py .
 
 # Install packages
 RUN apt-get update -yq \
-    && apt-get upgrade -yq \
     && apt-get install -yq --no-install-recommends \
         build-essential \
         pkg-config \
@@ -21,10 +20,11 @@ RUN apt-get update -yq \
         tesseract-ocr \
         libtesseract-dev \
         libleptonica-dev \
-        clang \
         libboost-program-options-dev \
         zlib1g-dev \
-    && rm -rf /var/lib/apt/lists/*
+        libboost-python-dev \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get upgrade -yq
 
 
 RUN pip install pip cython \
@@ -45,7 +45,7 @@ RUN pip install pip cython \
 RUN git clone git://github.com/JohnLangford/vowpal_wabbit.git \
     && cd vowpal_wabbit \
     && ./autogen.sh \
-    && make CXX=clang++ \
+    && make \
     && make test \
     && make install \
     && cd .. \
@@ -61,3 +61,5 @@ RUN git clone --recursive https://github.com/dmlc/xgboost \
     && python setup.py install \
     && cd ../.. \
     && rm -rf xgboost
+
+RUN python info.py

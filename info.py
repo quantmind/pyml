@@ -4,7 +4,7 @@ from pkg_resources import require
 if __name__ == '__main__':
     packages = require('numpy', 'scipy', 'tables', 'psycopg2',
                        'pandas', 'lxml', 'Pillow', 'scikit-learn',
-                       'Theano', 'tensorflow')
+                       'Theano', 'tensorflow', 'xgboost')
     n = 0
     for p in packages:
         n = max(n, len(p.key))
