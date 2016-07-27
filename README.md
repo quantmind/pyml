@@ -41,6 +41,6 @@ Contains **Python 3.5.2** with the following libraries.
 * [scikit-learn](http://scikit-learn.org)
 * [Theano](https://github.com/Theano/Theano)
 * [Tensorflow](https://www.tensorflow.org/)
-* [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit)
+* [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit) (not available)
 * [XGBoost](https://xgboost.readthedocs.io/en/latest/)
 

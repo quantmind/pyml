@@ -4,6 +4,7 @@ MAINTAINER Luca Sbardella <luca@quantmind.com>
 
 ADD info.py .
 
+
 # Install packages
 RUN apt-get update -yq \
     && apt-get install -yq --no-install-recommends \
@@ -20,13 +21,10 @@ RUN apt-get update -yq \
         tesseract-ocr \
         libtesseract-dev \
         libleptonica-dev \
-        libboost-program-options-dev \
-        zlib1g-dev \
-        libboost-python-dev \
-    && rm -rf /var/lib/apt/lists/* \
-    && apt-get upgrade -yq
+    && rm -rf /var/lib/apt/lists/*
 
 
+# PYTHON PACKAGES
 RUN pip install pip cython \
     && pip install virtualenv \
         numpy \
@@ -41,17 +39,6 @@ RUN pip install pip cython \
     && pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.9.0-cp35-cp35m-linux_x86_64.whl
 
 
-# VOWPAL WABBIT
-RUN git clone git://github.com/JohnLangford/vowpal_wabbit.git \
-    && cd vowpal_wabbit \
-    && ./autogen.sh \
-    && make \
-    && make test \
-    && make install \
-    && cd .. \
-    && rm -rf vowpal_wabbit
-
-
 # XGBOOST
 RUN git clone --recursive https://github.com/dmlc/xgboost \
     && cd xgboost \
@@ -62,4 +49,6 @@ RUN git clone --recursive https://github.com/dmlc/xgboost \
     && cd ../.. \
     && rm -rf xgboost
 
-RUN python info.py
+
+RUN rm -rf /root/.cache \
+    && python info.py
