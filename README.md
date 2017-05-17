@@ -17,7 +17,7 @@ To show packages installed:
 docker run --rm quantmind/pyml python info.py
 ```
 
-Contains **Python 3.5.2** with the following libraries.
+Contains **Python 3.6.1** with the following libraries.
 
 ## Math & statistics
 

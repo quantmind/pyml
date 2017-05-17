@@ -3,9 +3,12 @@ machine:
   services:
     - docker
 
-test:
+dependencies:
   override:
     - export VERSION=latest; make
+
+test:
+  override:
     - export VERSION=latest; make test
 
 deployment:
