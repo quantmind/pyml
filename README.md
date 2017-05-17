@@ -1,16 +1,17 @@
-# Python ML
+# Machine Learning with Python
 
 **Docker Image**|[quantmind/pyml](https://hub.docker.com/r/quantmind/pyml/)
 --- | ---
 **Source code**|[quantmind/pyml](https://github.com/quantmind/pyml)
 **Created by**|[Quantmind](http://quantmind.com/)
+**CI**|[![CircleCI](https://circleci.com/gh/quantmind/pyml.svg?style=svg)](https://circleci.com/gh/quantmind/pyml)
 
 Data analysis and machine learning with python 3.
 
 Usage:
 ```
 docker pull quantmind/pyml
-docker run --rm --name pyml -it quantmind/pyml /bin/bash
+docker run --rm --name pyml -it quantmind/pyml bash
 ```
 To show packages installed:
 ```
@@ -43,4 +44,3 @@ Contains **Python 3.6.1** with the following libraries.
 * [Tensorflow](https://www.tensorflow.org/)
 * [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit) (not available)
 * [XGBoost](https://xgboost.readthedocs.io/en/latest/)
-

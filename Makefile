@@ -23,4 +23,4 @@ info:
 	docker run --rm -it $(NS)/$(REPO):$(VERSION) python info.py
 
 test:
-	docker run -v tests:tests --rm -it $(NS)/$(REPO):$(VERSION) nosetest
+	docker run -v $(PWD)/tests:/pyml/tests --rm -it $(NS)/$(REPO):$(VERSION) nosetests

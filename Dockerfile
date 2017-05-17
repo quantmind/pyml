@@ -2,9 +2,10 @@ FROM python
 
 LABEL maintainer Quantmind
 
-ADD info.py .
-ADD requirements.txt .
-ADD setup.cfg .
+WORKDIR /pyml
+ADD info.py /pyml/info.py
+ADD requirements.txt /pyml/requirements.txt
+ADD setup.cfg /pyml/setup.cfg
 
 
 # Install packages
