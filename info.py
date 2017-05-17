@@ -1,19 +1,35 @@
-from pkg_resources import require
+import sys
+
+import pip
+
+
+def python_packages(request):
+    return request.json_response(dict(packages()))
+
+
+def packages():
+    yield 'python', ' '.join(sys.version.split('\n'))
+    for p in sorted(_safe_dist(), key=lambda p: p[0]):
+        yield p
+
+
+def _safe_dist():
+    for p in pip.get_installed_distributions():
+        try:
+            yield p.key, p.version
+        except Exception:   # pragma    nocover
+            pass
 
 
 if __name__ == '__main__':
-    packages = require('numpy', 'scipy', 'tables', 'psycopg2',
-                       'pandas', 'lxml', 'Pillow', 'scikit-learn',
-                       'Theano', 'tensorflow', 'xgboost')
+    cache = []
     n = 0
-    for p in packages:
-        n = max(n, len(p.key))
+    for key, version in packages():
+        n = max(n, len(key))
+        cache.append((key, version))
 
     n += 3
     fmt = '{0:<%d}{1}' % n
-    processed = set()
-    for p in sorted(packages, key=lambda v: v.key):
-        if p.key in processed:
-            continue
-        print(fmt.format(p.key, p.version))
-        processed.add(p.key)
+
+    for key, version in cache:
+        print(fmt.format(key, version))

@@ -1,0 +1,15 @@
+numpy
+scipy
+tables
+ipython
+psycopg2
+pandas
+lxml
+Pillow
+scikit-learn
+tensorflow
+keras
+spacy
+nose
+flake8
+requests

@@ -1,8 +1,10 @@
-FROM python:3.5.2
+FROM python
 
-MAINTAINER Luca Sbardella <luca@quantmind.com>
+LABEL maintainer Quantmind
 
 ADD info.py .
+ADD requirements.txt .
+ADD setup.cfg .
 
 
 # Install packages
@@ -25,18 +27,9 @@ RUN apt-get update -yq \
 
 
 # PYTHON PACKAGES
-RUN pip install pip cython \
-    && pip install virtualenv \
-        numpy \
-        scipy \
-        tables \
-        psycopg2 \
-        pandas \
-        lxml \
-        Pillow \
-        scikit-learn \
-        Theano \
-    && pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.9.0-cp35-cp35m-linux_x86_64.whl
+RUN pip install -U pip \
+    && pip install cython \
+    && pip install -r requirements.txt
 
 
 # XGBOOST
