@@ -47,7 +47,7 @@ RUN git clone --recursive https://github.com/dmlc/xgboost \
 
 # Vowpal Wabbit
 RUN git clone git://github.com/JohnLangford/vowpal_wabbit.git \
-    && apt-get update -yq
+    && apt-get update -yq \
     && apt-get install -yq --no-install-recommends \
         libboost-program-options-dev \
         zlib1g-dev \
