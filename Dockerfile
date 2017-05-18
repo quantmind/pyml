@@ -58,7 +58,7 @@ RUN git clone git://github.com/JohnLangford/vowpal_wabbit.git \
     && make \
     && make test \
     && make install \
-    && cd ..
+    && cd .. \
     && rm -rf vowpal_wabbit \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
