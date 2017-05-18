@@ -1,6 +1,7 @@
 numpy
 scipy
 tables
+h5py
 ipython
 psycopg2
 pandas

@@ -39,8 +39,13 @@ Contains **Python 3.6.1** with the following libraries.
 
 ## Machine Learning
 
-* [scikit-learn](http://scikit-learn.org)
-* [Theano](https://github.com/Theano/Theano)
-* [Tensorflow](https://www.tensorflow.org/)
-* [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit) (not available)
-* [XGBoost](https://xgboost.readthedocs.io/en/latest/)
+* [scikit-learn](http://scikit-learn.org) - data analysis and manipulation in python
+* [keras](https://github.com/fchollet/keras) - high-level neural networks API for [tensorflow] or [theano]
+* [theano][] - evaluate mathematical expressions involving multi-dimensional arrays efficiently
+* [tensorflow][] -  numerical computation using data flow graphs
+* [vowpal wabbit](https://github.com/JohnLangford/vowpal_wabbit) - fast online learning code
+* [XGBoost](https://xgboost.readthedocs.io/en/latest/) - optimized distributed gradient boosting library
+
+
+[tensorflow]: https://www.tensorflow.org/
+[theano]: https://github.com/Theano/Theano

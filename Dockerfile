@@ -2,6 +2,7 @@ FROM python
 
 LABEL maintainer Quantmind
 
+
 WORKDIR /pyml
 ADD info.py /pyml/info.py
 ADD requirements.txt /pyml/requirements.txt
@@ -43,6 +44,24 @@ RUN git clone --recursive https://github.com/dmlc/xgboost \
     && cd ../.. \
     && rm -rf xgboost
 
+
+# Vowpal Wabbit
+RUN git clone git://github.com/JohnLangford/vowpal_wabbit.git \
+    && apt-get update -yq
+    && apt-get install -yq --no-install-recommends \
+        libboost-program-options-dev \
+        zlib1g-dev \
+        libboost-python-dev \
+        libvw0 \
+    && cd vowpal_wabbit \
+    && ./autogen.sh \
+    && make \
+    && make test \
+    && make install \
+    && cd ..
+    && rm -rf vowpal_wabbit \
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN rm -rf /root/.cache \
     && python info.py
